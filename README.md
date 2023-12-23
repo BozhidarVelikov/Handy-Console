@@ -93,6 +93,7 @@ To remove a previously-defined macro, use the command ```/remove-macro```:
 Handy Console comes with a couple of builtin commands:
 
 ### Base commands
+
 | Command | Description |
 | --- | --- |
 | ```/help``` | Prints information about Handy Console and how to use it. |
@@ -105,6 +106,7 @@ Handy Console comes with a couple of builtin commands:
 | ```/macros``` | Shows a list of all possible macros on the terminal. |
 
 ### Util commands
+
 | Command | Description |
 | --- | --- |
 | ```/instantiate``` | Instantiates a game object prefab from the ```Resources``` folder with the specified name at the specified position with the specified rotation. |
