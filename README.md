@@ -1,7 +1,5 @@
 Welcome to the **Handy Console** documentation page. Here you will find all the information for the tool.
 
-{:toc}
-
 ## Get Started
 In order to get started as quickly as possible, simply do the following steps:
 
