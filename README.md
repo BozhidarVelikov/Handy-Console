@@ -88,7 +88,7 @@ To define a macro, use the command ```/add-macro```:
 To use a macro, type the ```#``` sign, followed by a previously-defined word:
 
 ```
-/ instantiate "Game Object" (0,0,0) #identity
+/instantiate "Game Object" (0,0,0) #identity
 ```
 
 To remove a previously-defined macro, use the command ```/remove-macro```:
