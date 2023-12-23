@@ -1,4 +1,3 @@
-# Handy Console
 Welcome to the **Handy Console** documentation page. Here you will find all the information for the tool.
 
 ## Get Started
