@@ -11,7 +11,7 @@ After this, Handy Console should be all set and ready to use!
 
 ## Creating Commands
 
-When using Handy Console, you will probably want to create your custom commands to fit your needs. To do this, you need to add the 
+When using Handy Console, you will probably want to create your custom commands to fit your needs. To do this, you need to add the ```Command``` tag. For example:
 
 ```C#
 using HandyConsole;
@@ -23,23 +23,25 @@ public static int Add(int a, int b) {
 ```
 
 You can call this command in the console by typing:
+
 ```cmd
 /add 1 2
 ```
 
 The ```[Command]``` attribute takes 3 arguments:
-1) ```command```: A string that ...gives a name to the command...
-2) ```usage```: Optional. You can specify how the manual command will show the usage of the command. By default, this is automatically generated based on the parameters in the function.
-3) ```description```: Oprional. The description of the command that the manual command will show. By default, the value is an empty string.
+1. ```command```: A string that ...gives a name to the command...
+2. ```usage```: Optional. You can specify how the manual command will show the usage of the command. By default, this is automatically generated based on the parameters in the function.
+3. ```description```: Oprional. The description of the command that the manual command will show. By default, the value is an empty string.
 
 ## Argument parsing
 ### Simple types
-Passing simple types as command arguments is straightforward: simply type the argument and the console will parse it. Refer to the ```/add``` command example above.
+Passing simple types as command arguments is straightforward: simply type the argument and the console will parse it. Refer to the ```/add``` command example from above.
 
 ### Strings
 Strings are a bit different. If the string doesn't contain any white spaces, you can type it without quotes. On the other hand, if it contains white spaces, it needs to be put in quotes. In case you need to use a quote inside a string parameter, put the parameter in quotes and simply type the quote sign as part of the string.
 
-For example, if we have the command ```hi``` that takes a string as an argument, you can pass the string in the following in the following ways:
+For example, if we have the command ```/hi``` that takes a string as an argument, you can pass the string in the following ways:
+
 ```
 /hi John
 /hi "John"
@@ -50,11 +52,13 @@ In the first two cases, the passed argument will have the value ```John```, whil
 
 ### Complex types
 In order to parse a complex type as an argument, you need to put it in braces. Inside these braces you need to give arguments that correspond to one of the constructors of the object. For example, let's take a look at the ```/teleport``` command, which takes a string as its first argument and a ```Vector3``` as its second argument:
+
 ```cmd
 /teleport "Game Object" (0,0,0)
 ```
 
 You can also use complex types within complex types. Imagine the scenario:
+
 ```C#
 public class Position {
     public Position(Vector3 position) { ... }
@@ -67,6 +71,7 @@ public class Commands {
 ```
 
 You can call the ```set_position``` function by typing:
+
 ```cmd
 /set_position ((0,0,0))
 ```
@@ -75,16 +80,19 @@ You can call the ```set_position``` function by typing:
 Macros are user-defined words that are replaced by a value that they represent. 
 
 To define a macro, use the command ```/add-macro```:
+
 ```
 /add-macro identity (0,0,0,1)
 ```
 
 To use a macro, type the ```#``` sign, followed by a previously-defined word:
+
 ```
 / instantiate "Game Object" (0,0,0) #identity
 ```
 
 To remove a previously-defined macro, use the command ```/remove-macro```:
+
 ```
 /remove-macro identity
 ```
