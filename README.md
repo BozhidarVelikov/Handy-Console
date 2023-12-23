@@ -1,4 +1,4 @@
-Welcome to the **Handy Console** documentation page. Here you will find all the information for the tool. For more information, check the example script ```Examples > ExampleCommands.cs```
+Welcome to the **Handy Console** documentation page. Here you will find all the information for the tool. For more examples, check the script ```Examples > ExampleCommands.cs```.
 
 ## Get Started
 In order to get started as quickly as possible, simply do the following steps:
