@@ -3,9 +3,9 @@ Welcome to the **Handy Console** documentation page. Here you will find all the 
 ## Get Started
 In order to get started as quickly as possible, simply do the following steps:
 
-1) Ensure you have Text Mesh Pro package installed (this is done by default for new projects)
-2) Make sure you have an Event System in your scene (navigate to ```GameObject > UI > EventSystem``` to add one)
-3) Navigate to ```Assets/Handy Console/Prefabs``` and drag the ```Console``` prefab to your scene.
+1. Ensure you have Text Mesh Pro package installed (this is done by default for new projects)
+2. Make sure you have an Event System in your scene (navigate to ```GameObject > UI > EventSystem``` to add one)
+3. Navigate to ```Assets/Handy Console/Prefabs``` and drag the ```Console``` prefab to your scene.
 
 After this, Handy Console should be all set and ready to use!
 
