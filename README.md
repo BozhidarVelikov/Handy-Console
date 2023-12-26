@@ -1,6 +1,18 @@
 Welcome to the **Handy Console** documentation page. Here you will find all the information for the tool. For more examples, check the script ```Examples > ExampleCommands.cs```.
 
-## Get Started
+## Table of contents
+1. [Get Started](#get-started)
+2. [Creating Commands](#creating-commands)
+3. [Argument Parsing](#argument-parsing)
+   1. [Simple Types](#simple-types)
+   2. [Strings](#strings)
+   3. [Complex Types](#complex-types)
+4. [Macros](#macros)
+5. [OOTB Commands](#ootb-commands)
+   1. [Base Commands](#base-commands)
+   2. [Util Commands](#util-commands)
+
+## Get Started <a name="get-started"></a>
 In order to get started as quickly as possible, simply do the following steps:
 
 1. Ensure you have Text Mesh Pro package installed (this is done by default for new projects)
@@ -9,7 +21,7 @@ In order to get started as quickly as possible, simply do the following steps:
 
 After this, Handy Console should be all set and ready to use!
 
-## Creating Commands
+## Creating Commands <a name="creating-commands"></a>
 
 When using Handy Console, you will probably want to create your custom commands to fit your needs. To do this, you need to add the ```Command``` tag. For example:
 
@@ -33,11 +45,11 @@ The ```[Command]``` attribute takes 3 arguments:
 2. ```usage```: Optional. You can specify how the manual command will show the usage of the command. By default, this is automatically generated based on the parameters in the function.
 3. ```description```: Oprional. The description of the command that the manual command will show. By default, the value is an empty string.
 
-## Argument parsing
-### Simple types
+## Argument parsing <a name="argument-parsing"></a>
+### Simple types <a name="simple-types"></a>
 Passing simple types as command arguments is straightforward: simply type the argument and the console will parse it. Refer to the ```/add``` command example from above.
 
-### Strings
+### Strings <a name="strings"></a>
 Strings are a bit different. If the string doesn't contain any white spaces, you can type it without quotes. On the other hand, if it contains white spaces, it needs to be put in quotes. In case you need to use a quote inside a string parameter, put the parameter in quotes and simply type the quote sign as part of the string.
 
 For example, if we have the command ```/hi``` that takes a string as an argument, you can pass the string in the following ways:
@@ -50,7 +62,7 @@ For example, if we have the command ```/hi``` that takes a string as an argument
 
 In the first two cases, the passed argument will have the value ```John```, while in the third case, it will have the value ```"John"```.
 
-### Complex types
+### Complex types <a name="complex-types"></a>
 In order to parse a complex type as an argument, you need to put it in braces. Inside these braces you need to give arguments that correspond to one of the constructors of the object. For example, let's take a look at the ```/teleport``` command, which takes a string as its first argument and a ```Vector3``` as its second argument:
 
 ```cmd
@@ -76,7 +88,7 @@ You can call the ```set_position``` function by typing:
 /set_position ((0,0,0))
 ```
 
-## Macros
+## Macros <a name="macros"></a>
 Macros are user-defined words that are replaced by a value that they represent. 
 
 To define a macro, use the command ```/add-macro```:
@@ -97,10 +109,10 @@ To remove a previously-defined macro, use the command ```/remove-macro```:
 /remove-macro identity
 ```
 
-## OOTB Commands
+## OOTB Commands <a name="ootb-commands"></a>
 Handy Console comes with a couple of builtin commands:
 
-### Base commands
+### Base commands <a name="base-commands"></a>
 
 | Command | Description |
 | --- | --- |
@@ -113,7 +125,7 @@ Handy Console comes with a couple of builtin commands:
 | ```/remove-macro``` | Removes a previously-defined special word. |
 | ```/macros``` | Shows a list of all possible macros on the terminal. |
 
-### Util commands
+### Util commands <a name="util-commands"></a>
 
 | Command | Description |
 | --- | --- |
